@@ -1,0 +1,469 @@
+Pertemuan 1---------------------------------------------------------------------------------------------------------------------------------------------------------
+---OPP(Object Oriented Programming) dasar -------
+
+Object Oriented Programming ?
+sering disebut gaya pemrograman/programming style/paradigma pemrograman, sebelum melanjutkan topik alangkah baik harus tahu tentang procedural programming
+
+--Procedural Programming---
+1.Intruksi dilakukan langkah demi langkah, urut langkah dibaca dari dari atas turun kebawah
+2.memecahkan program menjadi bagian-bagian kecil, kita berusahan modularisasi file tersebut dengan cara memecah program menjadi bagian" yang kecil, contoh file functin didalam file tersebut memiliki banyak fungsi-fungsi yang memiliki mengerjakan tujuan tertentu sering disebut prosedur, subroutine, atau function
+3. Linear/ top -to- bottom = cara kerjanya dari atas kebawah 
+4. Bahasa Pemrograman yang mendukung style prosedural ini ialah Fotran, ALGOL, COBOL, Pascal, C, PHP, Javascript, PHP
+
+------Kelebihan Procedural Programmmimg --
+1. to the poiint = jadi kita bisa langsung melakukan yang kita mau dengan menulis barisan tertentu, beda  halnya dengan objek oriented programing, dimana kita harus menuliskan atau medefinisikan sesuatu terlebih dahulu sebelum kita melakukan sesuatu.
+2. Simplicity & kemudahan inplementasi(untuk compiler & interpreter) = kemudahan untuk dibaca dan dikelola oleh compiler maupun interpreter , contoh  
+pritf"hello world"; dikerjakan oleh compiler lalu hasilnya ditampilkan ke layar (interpreter)
+3. Mudah ditelusuri, karena dia linier itu nanti akan mudah mencari letak kesalahannya, jika ada eror pesan kesalahannya langsung menargetkan ke baris tersebut;
+4. Membutuhkan lebih sedikit memory  (dibandikan dengan OPP)= karena to the point membutuhkan sedikit memory pada saat eksekusinya dibandikan menggunakan OOP, nah karena nantinya menggunakan OPP ada banyak hal yang harus diload dulu ke memory sebelum kita mengerjakan sesuatu.
+
+
+----Object Oriented Programing----
+1. Menyusun semua code program struktur data sebagai objek = dengan menggunakan OOP nantinya kita akam menyusun semua program kita kedalam objek-object, jadi nanti semuanya akan anggap sebagai objek.
+2. Objek adalah unit dasar dari program, pembentuk dari programnya, karena tadi semuanya dibuat oleh objek maka objectlah memegang peranan penting.
+3. Objeck menyimpanan data dan prilaku, nah kita cendrung tidak punya lagi variable dan function, kita sekarang mempuyai data dan prilaku(behavior) sering disebut property dan method
+4. Objek bisa saling berinteraksi, nah nanti kita membuat banyak objek dan objek itu harus saling berinteraksi
+5. Bahasa Pemrograman yang menggunakan OPP, Java, Ruby, Python, C++, javascript, PHP5 keatas.
+
+---Kelebiahan Object Oriented Programming---
+1. Reprensentasi dunia nyata, dengan menggunakan pradigma OPP ini kita mempermudah representasi didunia nyata, yang nantinya menjadi kebutuhan dari program kita 
+contohnya membuat user diwebsite nah kita lebih mudah merepresentasikannya menggunakan object dibadingkan menggunakan Procedural
+2. Enkapsulasi & Abstraksi data, Enkapsulasi memungkikan data yang kita buat itu aman, aman dari sisi tidak bisa diakses oleh bagian lain dari program kita.
+, Abstraksi Data itu dengan OPP kita makan udah untuk menyembunyikan kerumitan dari program kita, karena nanti akan dibikin menjadi objek-objek
+3. Reusability, dimana nanti kita dapat dengan rmudah untuk mengguna ulang bagian-bagian program yang kita pernah buat.
+4. Skalabilitas & Ekstensibiltas, dengan menggunakan OOP ini akan mempermudah pemgembang atau si pembuat, ketika programnya akan lebih besar, jika menggunakan prosedural itu cenderung lebih susah karena semuanya disimpan di satu tempat
+5. kemudahan pengelola, 
+6. Kolaborasi, dengan menggunkan paradigma OOP kita lebih mudah berkerja dalam 1 tim 
+7. Digunakan oleh framework, 
+
+bagus yang mana procedural apa OPP
+sama memiliki kebtuhan tujuan/masing", jika membuat program yang simple dikerjakan oleh sendiri sebaik ambil prosedural sedangkan membuat program dengan skala besar dan dikerjakan oleh tim ambil OOP ini.
+
+
+Konsep OPP pada PHP
+---Basic----
+dasar OPP dulu 
+1. Class & Object
+2. Property & Method 
+3. Constrctor = object kita memiliki karakteris bawaan atau default
+4. Object Type = dimana kita bisa membuat object sebagai tipe data sendiri
+5. Inheritance = pewarisan sebuah object atau kelas bisa saling mewarisin satu sama lain
+6. Visiblity/ Access Modifier = Data kita dibisa diakses oleh bagian yang lain atau pengaturan hak akses
+7. Setter & Getter = sama juga terkait encapkulasi, tidak bisa sembarang mengubah data atau property kita harus menggunakan sesuatu ialah setter dan getter
+8. Static Method = 
+
+ 
+---Advanced---
+1.Abstract & interface
+2.Interceptor
+3.Object Cloning = menduplicate object tapi tidak membawa prilaku yang sama pada bawaan sebelumnya
+4.Callbacks & Closures
+5. Namespaces & Autoloading. = kita harus memberi loading setiap objectnya
+
+
+Pertemuan 2---------------------------------------------------------------------------------------------------------------------------------------------------------
+---Class & Object-----
+----Class-----
+-Blueprint/template untuk membuat insatance dari object
+-Class mendefinisi object
+- Class bisa menyimpan data dan perilaku yang disebut dengan property dan method 
+
+--membuat Class--
+-Diawali dengan menuliskan keyword class, ikuti nama dan dibatasi dengan{} untuk menyimpan property dan method
+- Aturan penamaan class sama seperti variable tidak boleh mengandung spasi dan mengisi dengan angka
+contoh:
+<?php
+class Coba {
+
+	public $a; => property
+
+	// method
+	public function b(){
+
+	}
+}
+
+?>
+
+-----Object----
+- Instance/sebagai contoh yang didefinisikan oleh Class
+- Banyak object dapat dibuat menggunakan satu class
+- Object dibuat dengan menggunakan keyword new
+
+--membuat Object---
+
+<?php
+
+class  Coba{
+
+}
+
+// membuat object instance dari class
+$a = new Coba();
+$b = new Coba();
+
+?>
+
+--Pertemuan 3 ---------------------------------------------------------------------------------------------------
+--Property dan Method---
+
+--Property-
+- Merepresentasikan data / keadaan dari sebuah object
+- Variable yang ada didalam object(member variable)
+- Sama  seperti variable didalam PHP, tetapi ditambah dengan Visiblity di depannya
+ada 3 yaitu : private, public, and protected
+
+
+-method--
+- merepresentasikan perilaku dari sebuah object
+- functin yang ada didalam object
+- sama seperti functin didalam dalam PHP, tetapi ditambah dengan Visiblity/ Access Modifier didepannya
+jika tidak berisi Visiblity, maka nilai default dipakai, nilai default = public;
+
+
+contoh kasus sederhana :
+
+Mobil
+
+--Property ---
+1. nama
+2. Merk
+3. warna
+4. kecepatan maksimal
+5. jumlah penumpang
+6. tahun pembuat
+
+---Method---
+1. bisa berjalan
+2. ganti transmisi
+3. tambah kecepatan
+
+jika direprensentasikan dicoding PHP :
+
+<?php
+
+Class Mobil{
+
+	public $nama,
+	public $merk,
+	publick $warna,
+	public $ jumlah_penumpang;
+
+	public function bisa_berjalan(){
+
+	}
+
+	public funtion ganti_transmisi(){
+
+	}
+
+	public function bisa_berjalan(){
+
+	}
+
+}
+
+
+
+Pertemuan 4 -----------------------------------------------------------------------------------------------------------------------
+
+--- Constructor----
+Sebuah Method spesial yang khusus didalam sebuah class, karena Constrctor mengotomatiskan method dijalankan ketika sebuah class  
+ketika kita menginstasisasi/ kita membuat objeknya, jadi ketika kita membuat object dengan keyword new
+secara otomatis pula ada sebuah method yang dijalankan yang disebut Constructor
+
+kenapa kita membutuhkan constructor method ?
+-yaitu ketika kita nantinya membuat object pastinya semakin banyak digunakan maka dari itu kita mempersingkangnya di parameter class 
+object tersebut nanti akan otomatis atau diambil atau ditangkap dioleh constructor method
+
+
+- cara membuat constructor method sama seperti method biasa cuma bedanya nama yang digunakan
+
+
+
+Pertemuan 5 -----------------------------------------------------------------------------------------------------
+--- object Type---
+ada type data primitif, seperti
+1. integer
+2. string
+3. boolean
+4. bentukan Object
+
+kita bisa membuat object sebagai type data sendiri.
+
+Pertemuan 6 ------------------------------------------------------------------------------------------------------
+--- Inheritance (pewarisan)----
+Inheritance adalah Konsep yang nantinya 
+1.menciptakan hirarki antar kelas(parent & child)
+- child class, mewarisin semua properti dan method dari parent-nya dengan syarat(visible)
+- child class, memperluas(extends) fungsionalitas dari class parent-nya, jadinya mengembangkan class parentnya
+
+why Inheritance????
+mempermudah untuk kita membuat kelas class baruu tinggal diextends(diperluas atau diyu) saja 
+
+
+
+Pertemuan 7 --------------------------------------------------------------------
+-Inheritance
+
+Class mobil memiliki
+- property /data vaiable
+1.nama
+2.warna
+3.merk
+4.kecepatanMaksimal
+5.jumlahPenumpang
+-method / function atau behavior
+1.tambahkan kecepatan
+2. kurangin kecepatan
+3. gantiTransmisi
+4. belokKiri
+5. belokKanan
+6. jalanMundur 
+
+
+instance mobil sport memiliki property dan method yang khusus.
+- property
+1.turbo
+- method
+1. Jalankan turbo.
+
+
+Pertemuan 8 --------------------------------------------------------------------------------------------------------
+Overriding
+Overriding adalah sebuah istilah dimana kita bisa membuat method diclass child yang memiliki nama yang sama 
+di class parent-nya, atau istilahnya mengambil alih/ menimpa method yang kita buat menimpa method punyanya parent
+class.
+
+Kenapa membuat overriding ini ???
+agar kita melakukan fungsionalitas yang sama tapi dengan keadaan yang berbeda
+tanda :: adalah method Static ya.
+
+Pertemuan 9 -------------------------------------------------------------------------------------------------------
+Visiblity atau Acess Modifier;
+- Konsep yang digunakan untuk mengatur akses dari property dan method pada sebuah object
+- Ada 3 keyword visibilty : public, protected,dan private.
+  1. Public , dapat digunakan atau diaccess dimana saja, bahkan diluar kelas
+  2. Protected, hanya dapat digunakan didalam sebuah class beserta turunannya, maksudnya jika kita memiliki kelas
+	 Inheritance maka kedua tersebut bisa menggunakan property dan method dengan menggunakan visiilty protected.
+  3. Private, property dan methodnya hanya dapat digunakan didalam sebuah kelas tertentu saja.
+	dikelas itu saja 
+
+Kenapa kita perlu menerapkan Access Modifier ini atau  Visiblity ini ????
+- Hanya memperlihatkan aspek dari class yang dibutuhkan oleh 'client', maksdudnya mungkin kalau kerja kolaborasi
+  lalu kalian tidak mengizinkan bagian lain dari program yang mengakses bagian kelas kita.
+- Menentukan kebutuhan yang jelas untuk object.
+- Memberikan kendali pada kode untuk menghindari 'bug'
+
+
+Pertemuan 10 ----------------------------------------------------------------------------------------------------
+Setter and Getter (Accessor Modifier) 
+visibility hubungannnya sangat erat kaitannya, karna kita menggunakan setter dan getter ini untuk menghindari
+ketika kita membuat property dengan visibility public
+  1. Public , dapat digunakan atau diaccess dimana saja, bahkan diluar kelas
+  2. Protected, hanya dapat digunakan didalam sebuah class beserta turunannya, maksudnya jika kita memiliki kelas
+	 Inheritance maka kedua tersebut bisa menggunakan property dan method dengan menggunakan visiilty protected.
+  3. Private, property dan methodnya hanya dapat digunakan didalam sebuah kelas tertentu saja.
+	dikelas itu saja 
+
+- method nanti kita sebut dengan setter (penyetel) dan getter (pengambilan/memperlihatkan)
+- method ada 2 ya 
+
+Nah sebetulnya dari visibility kita sudah membuat method setter dan getter, tetapi propertynya ada Public
+harusnya property itu protected atau private dan itu juga tergantung dari kelas childnya atau tidak.
+
+-ingat private bisa menggunakan diclass bersangkutan saja.
+tidak bisa memanggil property private maka dari itu buatlah method yang bisa menampilakan property private 
+di class bersangkutan atau sudah membuat property private.
+
+- jadi tidak tidak membiarkan orang mengaksesnya dari luar
+
+** Kenapa kita capek-capek membuat function seperti itu ???** 
+betul sekali jika menggunakan public performannya akan lebih baik ketimbang Private
+kelebihannya membuat setter dan getter ini, supaya nanti kita melakukan sesuatu didalam functionnya
+semisalnya kita melakukan validasi yang boleh di Input adalah String saja.
+
+Setter = setNamafunction() 
+Getter = getnamafunction()
+
+
+Selanjutnya setter dan getter ini memiliki magic method dan php ada banyak magic method seperti constructor
+__set() & __get()
+
+
+Pertemuan 11 ------------------------------------------------------------------------------------------------------
+---Static keyword---
+Kembali materinya ya <3
+Class merupakan template dari object, ketika kita membuat object atau instansiasi object disitulah kita bisa
+meraih method dan property yang ada didalam classnya, Tetapi kita bisa mengakses property dan method dalam konteks
+class, ini maksudnya kita bisa mengakses property dan method tanpa melakukan instansiasi dari Class tersebut 
+Kita bisa menggunakan hal tersebut dengan Static Keyword.
+
+
+echo ContohStatic::$angka;
+bukan menggunakan titik dua ya:)
+- this-> , berlaku untuk object sudah di Instansiasi.
+- self::$variable, mengambil nilai yang keywordnya Static.
+
+
+Untuk apa sih static keyword itu??
+- member(property dan method) yang terikat dengan class, bukan object.
+- Nilai static akan selalu tetap meskipun object di-instansisasi berulang kali. contoh seperti yang sudah dipraktikan.
+- Membuat kode menjadi "Prosedural".
+- Biasanya digunakan untuk membuat fungsi bantuan/ helper.
+- Atau digunakan di class-class utility pada framework.
+
+Pertemuan 12 ---------------------------------------------------------------------------------------------------------
+--Constant--
+Constanta sebuah identifier untuk menyimpan nilai tetap atau tidak dapat dirubah maupun diset.
+Ada 2 cara membuat constanta ini :
+- define() ---> tidak boleh dibuat didalam kelas harus diluar class, sebagai constanta global.
+- const		---> bisa masuk dalam class sehingga bisa menggunakan konsep OPP.
+
+Untuk Mengakses Constant sama sepeti keyword Static.
+
+-- Didalam PHP memiliki Magic Constant --
+1.__LINE__
+2.__FILE__
+3.__DIR___
+4.__FUNCTION__
+5.__CLASS__
+6.__TRAIT__
+7.__METHOD__
+8.__NAMESPACE__
+
+Pertemuan 13 ---------------------------------------------------------------------------------------------------
+-- Konsep Abstract Class ---
+
+*Abstract Class 
+- Sebuah kelas yang tidak dapat di-instansiasi, dengan cara menginstasisasi class turunannya yaitu(inheritance)
+- Kelas 'asbtrak'
+- mendefinisikan interface untuk kelas lain yang menjadi turunannya.
+- Berperan sebagai 'kerangka dasar' untuk kelas turunannya, ini berkaitan dengan class turunnya bekerja sesuai
+kerangka atau interface yang kita buat diclass abstract ini.
+- Memiliki minimal 1 method abstract, dan nanti method ini yang akan kita anggap sebagai kerangka atau interface
+	method diclass turunannya.
+- Digunakan dalam 'pewarisan'/inheritance untuk 'memaksakan' inplementasi method abstract yang sama untuk semua
+	kelas turunannya. contoh nanti kita membuat method asbtrak yang ada didalamnya hanya interfacenya saja tidak 
+	ada isinya, Isinya ada diclass turunannya dan wajib aja method parentnya.
+- Semuan kelas turunannya, harus mengimplementasikan method abstract yang ada dikelas abstractnya.
+- Kelas abstract boleh memiliki property / method reguler(visibility);
+- Kelas abstract boelh memiliki property / static method
+- Tapi minimal 1 harus ada abstract method 
+
+-- Tester --
+	contoh sebagai berikut yang ada file inplementasi
+	untuk memanggil buah tidak bisa, hanya bisa memanggil class turunannya yaitu apel dan jeruk.
+
+--- Contoh Class Abstract ---
+1. class Mobil extends kendaraan --> sebelah extends yaitu kendaraan, bisa sebagai class abstract
+2. class Laptop extends Komputer
+3. class Email extends Komunikasi
+
+-- Kenapa Menggunakan class abstrak??
+1. Merepresentasikan ide atau konsep  yang nanti akan di inplementasikan diclass-class turunannya.
+	Penggunaan konsep abstract ini bukan masalahnya benar atau salah tapi keputusan desain untuk merancang 
+	desain perancangan dari class, kalau kalian mau menerapakan OOP kenapa tidak menggunakan konsep 
+	abstract class .
+2. "Composition over Inheritance", jadi sebaiknya kita melakukan komposisi/Composition dibanding melakukan 
+	inheritance begitu saja. Composition ini maksudnya asbtraksi atau interface.
+3. Salah satu cara menerapakan Polimorphisme. Lebih kompleks Polimorphisme harus memahami abstract dan interface
+4. Sentralisasi Logic
+5. Mempermudah pengerjaaan tim. Dengan menggunakan asbtrak kita membuat kelas utama yang sering disebut
+	base class atau kelas utama. Nah didalam class harus menulis minimal 1 method abstract  sehingga anggota tim
+	kalian bisa mengetahui subclass atau class turunnya.
+
+Pertemuan 14 ---------------------------------------------------------------------------------------------------------------
+-- implementasi Konsep abstract class --
+
+file abstract class 2;
+
+Pertemuan 15---------------------------------------------------------------------------------------------------------
+-- Interface --
+1 merupakan Class Abstract yang sama sekali tidak memiliki implementasi (kode), memiliki minimal 1 method abstract
+  hanya diImplementasikan di class turunannya saja.
+2 Murni merupakan template untuk kelas turunannya 
+3. Tidak boleh memiliki property, hanya deklarasi methodnya saja.
+4. Semua method harus dideklarasikan dengan visibility public
+5. Boleh mendeklarasikan __construct()
+6. Satu class boleh mengimplementasikan banyak interface
+7. Dengan menggunakan type-hinting(object tyoe) dapat melakukan "Dependency Injection" = kita memaksakan sebuah 
+   method untuk menerima parameternya adalah object atau object-type.
+8. Pada akhirnya akan mencapai polymorphism
+contoh implementasi pada interface
+// bukan class lagi
+interface Buah{
+ 
+	// tidak boleh ada property-nya
+
+	public function makan();
+	public function setWarna($warna);
+}
+
+
+interface Bentuk{
+
+	public function setUkuran($ukuran);
+}
+
+// inheritance atau turunannya
+// jika turunannya apapun method yang ada di Interface buat juga method seperti hal tersebut ya.
+// keyword implements bukan extends ya.
+// bisa menambahkan interface dengan menulis kode yang ada dibawah ini sebagai contohnya ya.
+
+class Apel implements Buah,Bentuk{
+
+	protected $warna;
+
+	public function makan(){
+		// kunyah
+		// habiskan
+	}
+
+	Public functin setWarna($warna){
+
+		$this->warna= $warna;
+	}
+
+
+}
+
+
+Pertemuan 16 -----------------------------------------------------------------------------------------------------------
+-- Overloading --
+merupakan Proses memanggil class (file) tanpa harus menggunakan require, karna nantinya kita membuat 1 class ditulis
+dalam 1 file.
+
+kenapa menggunakan require ??
+karna fungsi ini tidak ada masalah jika masih sederhana pada pembuatan aplikasi, sapa tau nanti jika proses aplikasi
+dikerjakan dengan tim itu membuat kita akan merepotkan.
+
+yuk pratikan hehehe
+
+Nama file harus sama dengan nama classnya ya;
+
+untuk file instansiasinya kita taruh di folder autoloading filenya bernama index.php
+
+ada fungsi untuk autoloading agar tidak banyak seperti itu merequire file"nya;
+- spl_autoload_register();
+
+jika ada file baru akan tetep load sendirinya, itu kelebihannya dan lebih mudah programer dalam menyelesaikan kasusnya.
+
+Pertemuan 17 ----------------------------------------------------------------------------------------------------
+-- Namespace --
+Merupakan sebuah cara untuk mengelompokkan program ke dalam sebuah package tersendiri, atau sering disebut 
+'Encapsulation';
+
+-- Kenapa Program kita harus dikelompokan??
+Karna pada dasarnya, PHP tidak mengijinkan kita untuk memiliki 1 Class dengan nama yang sama, 
+Nah jika muncul eror karena ada nama Class yang sama itu tidak masalah jika kita tidak bekerja sendiri.
+
+-- Bagaimana bekerja dengan Tim??
+Ini berarti kita harus tahu teman-teman kita untuk membuat class tidak boleh sama, bagaiman jika kita menggunakan script
+libarary dari pihak ke-tiga?? nah kita harus mengetahui nama class yang terdapat disana dan bagaimana jika menggunakan 
+composer, composer adalah sebuah package manage yang ada diseluruh dunia.
+
+Aturan menamai Namespace atau parameter-nya
+namespace Vendor\Namespace\SubNamespace;
+
+--> lanjut ke studi kasus yang bisa menggunakan autoload-nya jika menggunakan namespace ini
